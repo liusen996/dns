@@ -88,7 +88,7 @@ func parseAndValidateFlags() (*app.ConfigParams, error) {
 	flag.StringVar(&params.CoreFile, "corefile", "/etc/Corefile", "Path to the Corefile to be used by node-cache")
 	flag.StringVar(&params.KubednsCMPath, "kubednscm", "", "Path where the kube-dns configmap will be mounted")
 	flag.StringVar(&params.UpstreamSvcName, "upstreamsvc", "kube-dns", "Service name whose cluster IP is upstream for node-cache")
-	flag.StringVar(&params.HealthPort, "health-port", "8080", "port used by health plugin")
+	flag.StringVar(&params.HealthPort, "health-port", "18080", "port used by health plugin")
 	flag.BoolVar(&params.SkipTeardown, "skipteardown", false, "indicates whether iptables rules should be torn down on exit")
 	flag.Parse()
 

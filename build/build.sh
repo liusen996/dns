@@ -36,7 +36,11 @@ if [ $GOARCH == "amd64" ]; then
     export GOBIN="$GOPATH/bin/linux_amd64"
 fi
 
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn,direct
+unset GOBIN
 go install                                                         \
     -installsuffix "static"                                        \
     -ldflags "-X ${PKG}/pkg/version.VERSION=${VERSION}"            \
+
     ./...

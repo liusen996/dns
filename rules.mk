@@ -29,8 +29,8 @@ export VERSION
 SRC_DIRS := cmd pkg
 
 ALL_ARCH := amd64 arm arm64 ppc64le s390x
-BASEIMAGE ?= k8s.gcr.io/build-image/debian-base-$(ARCH):bullseye-v1.3.0
-IPTIMAGE ?= k8s.gcr.io/build-image/debian-iptables-$(ARCH):bullseye-v1.3.0
+BASEIMAGE ?= harbor.weizhipin.com/tcloud/k8s.gcr.io/build-image/debian-base-$(ARCH):bullseye-v1.3.0
+IPTIMAGE ?= harbor.weizhipin.com/tcloud/k8s.gcr.io/build-image/debian-iptables-$(ARCH):bullseye-v1.3.0
 
 # These rules MUST be expanded at reference time (hence '=') as BINARY
 # is dynamically scoped.

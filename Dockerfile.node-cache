@@ -13,6 +13,8 @@
 # limitations under the License.
 
 FROM ARG_FROM_IPT
+ENV GO111MODULE "on"
+ENV GOPROXY "https://goproxy.cn,direct"
 ADD bin/ARG_ARCH/ARG_BIN /ARG_BIN
 EXPOSE 53 53/udp
 EXPOSE 53 53/tcp
